@@ -17,9 +17,9 @@ EOT
     location                     = string
     name                         = string
     resource_group_name          = string
-    managed                      = optional(bool, true)
-    platform_fault_domain_count  = optional(number, 3)
-    platform_update_domain_count = optional(number, 5)
+    managed                      = optional(bool)   # Default: true
+    platform_fault_domain_count  = optional(number) # Default: 3
+    platform_update_domain_count = optional(number) # Default: 5
     proximity_placement_group_id = optional(string)
     tags                         = optional(map(string))
   }))
