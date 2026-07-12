@@ -1,3 +1,7 @@
+output "availability_sets_id" {
+  description = "Map of id values across all availability_sets, keyed the same as var.availability_sets"
+  value       = { for k, v in azurerm_availability_set.availability_sets : k => v.id }
+}
 output "availability_sets_location" {
   description = "Map of location values across all availability_sets, keyed the same as var.availability_sets"
   value       = { for k, v in azurerm_availability_set.availability_sets : k => v.location }
